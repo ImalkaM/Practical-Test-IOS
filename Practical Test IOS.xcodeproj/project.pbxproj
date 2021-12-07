@@ -58,16 +58,48 @@
 		AF958980275F65B100D3E6DB /* Practical Test IOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF95899B275F9EF700D3E6DB /* View */,
+				AF95899A275F9EE800D3E6DB /* ViewModel */,
+				AF958999275F9EDA00D3E6DB /* Controller */,
+				AF958998275F9ECD00D3E6DB /* Model */,
 				AF958981275F65B100D3E6DB /* AppDelegate.swift */,
 				AF958983275F65B100D3E6DB /* SceneDelegate.swift */,
-				AF958985275F65B100D3E6DB /* ViewController.swift */,
-				AF958987275F65B100D3E6DB /* Main.storyboard */,
 				AF95898D275F65B200D3E6DB /* Assets.xcassets */,
 				AF95898F275F65B200D3E6DB /* LaunchScreen.storyboard */,
 				AF958992275F65B200D3E6DB /* Info.plist */,
 				AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */,
 			);
 			path = "Practical Test IOS";
+			sourceTree = "<group>";
+		};
+		AF958998275F9ECD00D3E6DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF958999275F9EDA00D3E6DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF958985275F65B100D3E6DB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF95899A275F9EE800D3E6DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF95899B275F9EF700D3E6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF958987275F65B100D3E6DB /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
