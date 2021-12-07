@@ -61,6 +61,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="aeb-xk-2WN"/>
                     <navigationItem key="navigationItem" id="2aw-fQ-owi"/>
                     <connections>
+                        <outlet property="candidateDetailsTableView" destination="VY8-C7-C56" id="Yuw-8L-4rC"/>
                         <outlet property="searchBar" destination="6Pa-wd-AKm" id="s94-gr-ES5"/>
                     </connections>
                 </viewController>

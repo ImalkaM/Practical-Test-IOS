@@ -17,6 +17,9 @@
 		AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF95899E275FA26C00D3E6DB /* DetailViewController.swift */; };
 		AF9589A1275FA86900D3E6DB /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A0275FA86900D3E6DB /* SelectedViewController.swift */; };
 		AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A2275FAB6E00D3E6DB /* Candidate.swift */; };
+		AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A4275FB53500D3E6DB /* CandidateTableViewCell.swift */; };
+		AF9589A7275FB53500D3E6DB /* CandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */; };
+		AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A9275FBDD600D3E6DB /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		AF95899E275FA26C00D3E6DB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AF9589A0275FA86900D3E6DB /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		AF9589A2275FAB6E00D3E6DB /* Candidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		AF9589A4275FB53500D3E6DB /* CandidateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTableViewCell.swift; sourceTree = "<group>"; };
+		AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateTableViewCell.xib; sourceTree = "<group>"; };
+		AF9589A9275FBDD600D3E6DB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		AF958980275F65B100D3E6DB /* Practical Test IOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF9589A8275FBDAC00D3E6DB /* Networking */,
 				AF958998275F9ECD00D3E6DB /* Model */,
 				AF95899B275F9EF700D3E6DB /* View */,
 				AF958999275F9EDA00D3E6DB /* Controller */,
@@ -107,8 +114,18 @@
 			isa = PBXGroup;
 			children = (
 				AF958987275F65B100D3E6DB /* Main.storyboard */,
+				AF9589A4275FB53500D3E6DB /* CandidateTableViewCell.swift */,
+				AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AF9589A8275FBDAC00D3E6DB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF9589A9275FBDD600D3E6DB /* ApiService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +188,7 @@
 				AF958991275F65B200D3E6DB /* LaunchScreen.storyboard in Resources */,
 				AF95898E275F65B200D3E6DB /* Assets.xcassets in Resources */,
 				AF958989275F65B100D3E6DB /* Main.storyboard in Resources */,
+				AF9589A7275FB53500D3E6DB /* CandidateTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +204,10 @@
 				AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */,
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
 				AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */,
+				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,
 				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
+				AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
