@@ -22,6 +22,8 @@
 		AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A9275FBDD600D3E6DB /* ApiService.swift */; };
 		AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */; };
 		AF9589AF2760A51D00D3E6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */; };
+		AF9589B22760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */; };
+		AF9589B32760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		AF9589A9275FBDD600D3E6DB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
 		AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				AF95898F275F65B200D3E6DB /* LaunchScreen.storyboard */,
 				AF958992275F65B200D3E6DB /* Info.plist */,
 				AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */,
+				AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */,
+				AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */,
 			);
 			path = "Practical Test IOS";
 			sourceTree = "<group>";
@@ -220,9 +226,11 @@
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
 				AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */,
 				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,
+				AF9589B32760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */,
 				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
 				AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */,
+				AF9589B22760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */,
 				AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

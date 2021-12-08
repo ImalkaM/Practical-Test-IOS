@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 
 class CandidatesViewModel {
+    
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private var apiService = ApiService()
     var candidateData = [Candidate]()
@@ -23,11 +27,26 @@ class CandidatesViewModel {
             switch result {
             case .success(let listOf):
                 self?.candidateData = listOf.candidate
+                self?.saveUserData()
                 completion()
             case .failure(let error):
                 // Something is wrong with the JSON file or the model
                 print("Error processing json data: \(error)")
             }
+        }
+    }
+    
+    func saveUserData() {
+        for user in candidateData {
+            let newUser = CandidateDetails(context: context)
+            newUser.name = (user.name?.first)
+        }
+        do {
+            try context.save()
+            print("Success")
+            
+        } catch {
+            print("Error saving: \(error)")
         }
     }
     
