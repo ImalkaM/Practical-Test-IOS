@@ -119,22 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "545E3408-2F61-4288-929D-F492D767A040"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Practical Test IOS/Controller/CandidatesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "searchBar(_:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F4708553-EE54-48CF-8FA3-1951953A18A0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -144,7 +128,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "saveUserData()"
+            landmarkName = "saveUserDataLocally()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -160,7 +144,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "saveUserData()"
+            landmarkName = "saveUserDataLocally()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

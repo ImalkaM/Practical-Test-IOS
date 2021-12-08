@@ -29,7 +29,7 @@ class CandidatesViewModel {
             switch result {
             case .success(let listOf):
                 self?.candidateData = listOf.candidate
-                self?.saveUserData()
+                self?.saveUserDataLocally()
                 completion()
             case .failure(let error):
                 // Something is wrong with the JSON file or the model
@@ -38,7 +38,7 @@ class CandidatesViewModel {
         }
     }
     
-    func saveUserData() {
+    func saveUserDataLocally() {
         for user in candidateData {
             let newUser = CandidateDetails(context: context)
             newUser.firstName = user.name?.first

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF958981275F65B100D3E6DB /* AppDelegate.swift */; };
-		AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF958983275F65B100D3E6DB /* SceneDelegate.swift */; };
 		AF958989275F65B100D3E6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF958987275F65B100D3E6DB /* Main.storyboard */; };
 		AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */; };
 		AF95898E275F65B200D3E6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF95898D275F65B200D3E6DB /* Assets.xcassets */; };
@@ -25,12 +24,18 @@
 		AF9589C32761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */; };
 		AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C42761146400D3E6DB /* DetailViewModel.swift */; };
 		AF9589C7276121F400D3E6DB /* SelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C6276121F400D3E6DB /* SelectedViewModel.swift */; };
+		AF9589CB27612DDA00D3E6DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589CA27612DDA00D3E6DB /* SceneDelegate.swift */; };
+		AF9589CD27612E2A00D3E6DB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589CC27612E2A00D3E6DB /* Location.swift */; };
+		AF9589CF27612E6D00D3E6DB /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589CE27612E6D00D3E6DB /* Picture.swift */; };
+		AF9589D127612E8600D3E6DB /* Street.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D027612E8600D3E6DB /* Street.swift */; };
+		AF9589D327612EB800D3E6DB /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D227612EB800D3E6DB /* Name.swift */; };
+		AF9589D527612F0500D3E6DB /* BirthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D427612F0500D3E6DB /* BirthYear.swift */; };
+		AF9589D82761301700D3E6DB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D72761301700D3E6DB /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF95897E275F65B100D3E6DB /* Practical Test IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practical Test IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF958981275F65B100D3E6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF958983275F65B100D3E6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF958988275F65B100D3E6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF95898B275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Practical_Test_IOS.xcdatamodel; sourceTree = "<group>"; };
 		AF95898D275F65B200D3E6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +53,13 @@
 		AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF9589C42761146400D3E6DB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		AF9589C6276121F400D3E6DB /* SelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewModel.swift; sourceTree = "<group>"; };
+		AF9589CA27612DDA00D3E6DB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF9589CC27612E2A00D3E6DB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AF9589CE27612E6D00D3E6DB /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		AF9589D027612E8600D3E6DB /* Street.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Street.swift; sourceTree = "<group>"; };
+		AF9589D227612EB800D3E6DB /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		AF9589D427612F0500D3E6DB /* BirthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthYear.swift; sourceTree = "<group>"; };
+		AF9589D72761301700D3E6DB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,7 @@
 		AF958980275F65B100D3E6DB /* Practical Test IOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF9589C827612CB300D3E6DB /* LocalDB */,
 				AF9589AD2760905900D3E6DB /* Utilities */,
 				AF9589A8275FBDAC00D3E6DB /* Networking */,
 				AF958998275F9ECD00D3E6DB /* Model */,
@@ -87,13 +100,10 @@
 				AF958999275F9EDA00D3E6DB /* Controller */,
 				AF95899A275F9EE800D3E6DB /* ViewModel */,
 				AF958981275F65B100D3E6DB /* AppDelegate.swift */,
-				AF958983275F65B100D3E6DB /* SceneDelegate.swift */,
+				AF9589CA27612DDA00D3E6DB /* SceneDelegate.swift */,
 				AF95898D275F65B200D3E6DB /* Assets.xcassets */,
 				AF95898F275F65B200D3E6DB /* LaunchScreen.storyboard */,
-				AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */,
-				AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */,
 				AF958992275F65B200D3E6DB /* Info.plist */,
-				AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */,
 			);
 			path = "Practical Test IOS";
 			sourceTree = "<group>";
@@ -102,6 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				AF9589A2275FAB6E00D3E6DB /* Candidate.swift */,
+				AF9589CC27612E2A00D3E6DB /* Location.swift */,
+				AF9589CE27612E6D00D3E6DB /* Picture.swift */,
+				AF9589D027612E8600D3E6DB /* Street.swift */,
+				AF9589D227612EB800D3E6DB /* Name.swift */,
+				AF9589D427612F0500D3E6DB /* BirthYear.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,8 +162,27 @@
 		AF9589AD2760905900D3E6DB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				AF9589D72761301700D3E6DB /* Constant.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AF9589C827612CB300D3E6DB /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */,
+				AF9589C927612CE200D3E6DB /* CoreDataModel */,
+			);
+			path = LocalDB;
+			sourceTree = "<group>";
+		};
+		AF9589C927612CE200D3E6DB /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */,
+				AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */,
+			);
+			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,14 +257,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF95899D275F9FBD00D3E6DB /* CandidatesViewController.swift in Sources */,
+				AF9589CB27612DDA00D3E6DB /* SceneDelegate.swift in Sources */,
 				AF9589A1275FA86900D3E6DB /* SelectedViewController.swift in Sources */,
+				AF9589D127612E8600D3E6DB /* Street.swift in Sources */,
 				AF9589C32761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */,
+				AF9589CF27612E6D00D3E6DB /* Picture.swift in Sources */,
+				AF9589D327612EB800D3E6DB /* Name.swift in Sources */,
+				AF9589D82761301700D3E6DB /* Constant.swift in Sources */,
 				AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */,
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
+				AF9589D527612F0500D3E6DB /* BirthYear.swift in Sources */,
 				AF9589C22761087400D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */,
+				AF9589CD27612E2A00D3E6DB /* Location.swift in Sources */,
 				AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */,
 				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,
-				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
 				AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
 				AF9589C7276121F400D3E6DB /* SelectedViewModel.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate,UISearchBarDelegate{
+class CandidatesViewController: UIViewController{
    
     @IBOutlet var searchBar: UISearchBar!
     
@@ -18,18 +18,9 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCandidatesData()
-        let nib =  UINib(nibName: "CandidateTableViewCell", bundle: nil)
-        
-        candidateDetailsTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
-
-        searchBar.delegate = self
-        
-        candidateDetailsTableView.delegate = self
-        
+        setupSearchBar()
+        tableViewSetup()
         viewModel.getAllCandidates()
-        candidateDetailsTableView.dataSource = self
-        candidateDetailsTableView.reloadData()
-       
     }
     
     private func loadCandidatesData() {
@@ -38,24 +29,17 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
             self?.candidateDetailsTableView.reloadData()
         }
     }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if searchText == ""{
-            viewModel.filteredData = viewModel.models
-            candidateDetailsTableView.reloadData()
-        }else{
-            if let searchText = searchBar.text{
-                if searchText.count >= 3{
-                    viewModel.filterSearch(searchText)
-                    candidateDetailsTableView.reloadData()
-                }
-            }
-        }
-       
-    }
+
 }
 
-extension CandidatesViewController{
+extension CandidatesViewController:UITableViewDelegate, UITableViewDataSource{
+    
+    private func tableViewSetup() {
+        let nib =  UINib(nibName: "CandidateTableViewCell", bundle: nil)
+        candidateDetailsTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
+        candidateDetailsTableView.dataSource = self
+        candidateDetailsTableView.delegate = self
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
@@ -78,15 +62,32 @@ extension CandidatesViewController{
             
             
             vc.candidate = candidate
-            //vc.setCellWithValuesOf(candidate)
-            // 2: success! Set its selectedImage property
-//            vc.selectedImage = pictures[indexPath.row]
-//            vc.imageCountDetails = ["currentNumber":indexPath.row + 1]
-//            vc.imageCountDetails = ["Count":pictures.count]
-
-            // 3: now push it onto the navigation controller
+            
             navigationController?.pushViewController(vc, animated: true)
         }
     }
     
+}
+
+extension CandidatesViewController:UISearchBarDelegate{
+    
+    func setupSearchBar(){
+        searchBar.delegate = self
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == ""{
+            viewModel.filteredData = viewModel.models
+            candidateDetailsTableView.reloadData()
+        }else{
+            if let searchText = searchBar.text{
+                if searchText.count >= 3{
+                    viewModel.filterSearch(searchText)
+                    candidateDetailsTableView.reloadData()
+                }
+            }
+        }
+       
+    }
 }

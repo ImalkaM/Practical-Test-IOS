@@ -14,7 +14,7 @@ class ApiService {
     
     func getCandidatesData(completion: @escaping (Result<CandidateData, Error>) -> Void) {
         
-        let candidateDataURL = "https://randomuser.me/api/?results=50"
+        let candidateDataURL = APIConstant.baseURL
         
         guard let url = URL(string: candidateDataURL) else {return}
         
