@@ -24,6 +24,7 @@
 		AF9589C22761087400D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */; };
 		AF9589C32761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */; };
 		AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C42761146400D3E6DB /* DetailViewModel.swift */; };
+		AF9589C7276121F400D3E6DB /* SelectedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C6276121F400D3E6DB /* SelectedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF9589C42761146400D3E6DB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		AF9589C6276121F400D3E6DB /* SelectedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */,
 				AF9589C42761146400D3E6DB /* DetailViewModel.swift */,
+				AF9589C6276121F400D3E6DB /* SelectedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
 				AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
+				AF9589C7276121F400D3E6DB /* SelectedViewModel.swift in Sources */,
 				AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */,
 				AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */,
 			);

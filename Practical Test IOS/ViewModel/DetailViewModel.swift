@@ -10,9 +10,6 @@ import UIKit
 
 
 class DetailViewModel {
-    
-  
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     

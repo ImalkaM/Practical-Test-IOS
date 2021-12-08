@@ -7,23 +7,36 @@
 
 import UIKit
 
-class SelectedViewController: UIViewController {
-
+class SelectedViewController: UIViewController,UITableViewDataSource {
+   
+    @IBOutlet var selectedTableView: UITableView!
+    
+    private var viewModel = SelectedViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let nib =  UINib(nibName: "CandidateTableViewCell", bundle: nil)
+        selectedTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
+       
+        selectedTableView.dataSource = self
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.getAllCandidates()
+        selectedTableView.reloadData()
+    }
 
-        // Do any additional setup after loading the view.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRowsInSection(section: section)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = selectedTableView.dequeueReusableCell(withIdentifier: "CandidateTableViewCell", for: indexPath) as! CandidateTableViewCell
+        
+        let candidate = viewModel.cellForRowAt(indexPath: indexPath)
+        cell.setCellWithValuesOf(candidate)
+        
+        return cell
     }
-    */
-
 }

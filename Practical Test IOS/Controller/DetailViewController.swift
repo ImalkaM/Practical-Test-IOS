@@ -22,24 +22,26 @@ class DetailViewController: UIViewController {
     
     var viewModel = DetailViewModel()
     
-    var isSelected = false
+    var isSelected:Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isSelected = candidate?.isSelected
         navigationItem.rightBarButtonItem = UIBarButtonItem(title:candidate?.isSelected ?? false ? "Selected" : "Select", style: .plain, target: self, action: #selector(addTapped))
+        
         updateUI()
     }
     
     @objc func addTapped(){
-        isSelected.toggle()
+        isSelected?.toggle()
         DispatchQueue.main.async {
-            if self.isSelected{
+            if self.isSelected ?? false{
                 self.navigationItem.rightBarButtonItem?.title = "Selected"
             }else{
                 self.navigationItem.rightBarButtonItem?.title = "Select"
             }
         }
-        viewModel.updateCandidateStatus(candidate: candidate!, isSelected: isSelected)
+        viewModel.updateCandidateStatus(candidate: candidate!, isSelected: isSelected!)
     }
     
     // Setup candidates values

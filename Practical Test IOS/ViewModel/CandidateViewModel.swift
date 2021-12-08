@@ -10,8 +10,6 @@ import UIKit
 
 
 class CandidatesViewModel {
-    
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private var apiService = ApiService()

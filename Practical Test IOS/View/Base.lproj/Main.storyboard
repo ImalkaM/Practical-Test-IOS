@@ -9,21 +9,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Selected-->
         <scene sceneID="tfJ-CH-YfJ">
             <objects>
                 <viewController id="TpL-8b-pc3" customClass="SelectedViewController" customModule="Practical_Test_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aks-4v-bxD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-Jv-e2w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rUw-rR-biM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f4b-Jv-e2w" firstAttribute="trailing" secondItem="rUw-rR-biM" secondAttribute="trailing" id="BNc-pH-qnn"/>
+                            <constraint firstItem="f4b-Jv-e2w" firstAttribute="top" secondItem="rUw-rR-biM" secondAttribute="top" id="DY2-IK-b5u"/>
+                            <constraint firstItem="f4b-Jv-e2w" firstAttribute="bottom" secondItem="rUw-rR-biM" secondAttribute="bottom" id="f2a-tX-ugu"/>
+                            <constraint firstItem="f4b-Jv-e2w" firstAttribute="leading" secondItem="rUw-rR-biM" secondAttribute="leading" id="n3f-Oe-ooy"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="kJY-wc-iQ8"/>
+                    <tabBarItem key="tabBarItem" title="Selected" image="selection.pin.in.out" catalog="system" id="kJY-wc-iQ8"/>
+                    <connections>
+                        <outlet property="selectedTableView" destination="f4b-Jv-e2w" id="bhf-2U-4sh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9zI-kQ-R9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276" y="646"/>
+            <point key="canvasLocation" x="276" y="644.52773613193403"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="wDl-LY-bky">
@@ -45,14 +60,15 @@
                         <viewLayoutGuide key="safeArea" id="OM0-ic-o0K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="2LL-BR-ZBb"/>
                             <constraint firstItem="VY8-C7-C56" firstAttribute="trailing" secondItem="OM0-ic-o0K" secondAttribute="trailing" id="4W0-vt-VCe"/>
                             <constraint firstItem="cBg-bW-MOY" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="BVb-2r-c5l"/>
                             <constraint firstItem="OM0-ic-o0K" firstAttribute="trailing" secondItem="cBg-bW-MOY" secondAttribute="trailing" id="FJP-1Q-Djn"/>
                             <constraint firstItem="cBg-bW-MOY" firstAttribute="top" secondItem="OM0-ic-o0K" secondAttribute="top" constant="12" id="GFo-Zf-icY"/>
                             <constraint firstItem="VY8-C7-C56" firstAttribute="bottom" secondItem="OM0-ic-o0K" secondAttribute="bottom" constant="5" id="HB3-y8-gxw"/>
+                            <constraint firstItem="cBg-bW-MOY" firstAttribute="centerX" secondItem="f35-nL-Fjp" secondAttribute="centerX" id="Ivb-WL-BbL"/>
                             <constraint firstItem="VY8-C7-C56" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="XeG-z6-lFU"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="qK5-2g-BKX"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="jUs-Bb-7Qi"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="centerX" secondItem="f35-nL-Fjp" secondAttribute="centerX" id="lBP-wP-5ga"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="aeb-xk-2WN"/>
@@ -186,12 +202,12 @@
             </objects>
             <point key="canvasLocation" x="-95.200000000000003" y="1450.5247376311845"/>
         </scene>
-        <!--Item-->
+        <!--Candidates-->
         <scene sceneID="pCo-CM-i7S">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBB-mH-aYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="P1W-Tm-vxW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mvu-4H-9Cw"/>
+                    <tabBarItem key="tabBarItem" title="Candidates" image="person.crop.circle.fill" catalog="system" id="mvu-4H-9Cw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3O-vj-8jd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -206,6 +222,7 @@
     </scenes>
     <resources>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="selection.pin.in.out" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

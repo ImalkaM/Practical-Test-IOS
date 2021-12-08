@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate ,UISearchBarDelegate{
+class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate,UISearchBarDelegate{
    
     @IBOutlet var searchBar: UISearchBar!
     
