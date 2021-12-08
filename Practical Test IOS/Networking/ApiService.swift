@@ -12,11 +12,11 @@ class ApiService {
     
     private var dataTask: URLSessionDataTask?
     
-    func getPopularMoviesData(completion: @escaping (Result<CandidateData, Error>) -> Void) {
+    func getCandidatesData(completion: @escaping (Result<CandidateData, Error>) -> Void) {
         
-        let popularMoviesURL = "https://randomuser.me/api/?results=50"
+        let candidateDataURL = "https://randomuser.me/api/?results=50"
         
-        guard let url = URL(string: popularMoviesURL) else {return}
+        guard let url = URL(string: candidateDataURL) else {return}
         
         // Create URL Session - work on the background
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in

@@ -16,7 +16,7 @@ struct CandidateData: Decodable {
 }
 
 struct Candidate: Decodable {
-    let name: [Name]?
+    let name: Name?
     
     
     private enum CodingKeys: String, CodingKey {

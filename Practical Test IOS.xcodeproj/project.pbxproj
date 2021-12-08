@@ -20,6 +20,7 @@
 		AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A4275FB53500D3E6DB /* CandidateTableViewCell.swift */; };
 		AF9589A7275FB53500D3E6DB /* CandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */; };
 		AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A9275FBDD600D3E6DB /* ApiService.swift */; };
+		AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AF9589A4275FB53500D3E6DB /* CandidateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateTableViewCell.swift; sourceTree = "<group>"; };
 		AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateTableViewCell.xib; sourceTree = "<group>"; };
 		AF9589A9275FBDD600D3E6DB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		AF95899A275F9EE800D3E6DB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,
 				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
+				AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */,
 				AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
