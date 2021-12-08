@@ -2,9 +2,21 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CandidateDetails" representedClassName="CandidateDetails" syncable="YES">
         <attribute name="age" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="dob" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="imageAvatar" optional="YES" attributeType="String"/>
+        <attribute name="isSelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="locationNumber" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="streetName" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="tpNo" optional="YES" attributeType="String"/>
+        <attribute name="zip" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="CandidateDetails" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="CandidateDetails" positionX="-63" positionY="-18" width="128" height="239"/>
     </elements>
 </model>

@@ -11,47 +11,65 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var name: UILabel!
-    
     @IBOutlet var address: UILabel!
-    
     @IBOutlet var phoneNumber: UILabel!
-    
     @IBOutlet var dob: UILabel!
-    
     @IBOutlet var email: UILabel!
     
+    var candidate:CandidateDetails?
+    
+    let button = UIButton()
+    
+    var viewModel = DetailViewModel()
+    
+    var isSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title:candidate?.isSelected ?? false ? "Selected" : "Select", style: .plain, target: self, action: #selector(addTapped))
+        updateUI()
+    }
+    
+    @objc func addTapped(){
+        isSelected.toggle()
+        DispatchQueue.main.async {
+            if self.isSelected{
+                self.navigationItem.rightBarButtonItem?.title = "Selected"
+            }else{
+                self.navigationItem.rightBarButtonItem?.title = "Select"
+            }
+        }
+        viewModel.updateCandidateStatus(candidate: candidate!, isSelected: isSelected)
     }
     
     // Setup candidates values
-    func setCellWithValuesOf(_ candidate:Candidate) {
+    func setCellWithValuesOf(_ candidate:CandidateDetails) {
         DispatchQueue.main.async {
-            self.updateUI(name: candidate.name, address: candidate.location, phoneNumber: candidate.phoneNumber, dob: candidate.dob?.date, email: candidate.email, imageUrl: candidate.picture?.large)
+            //self.updateUI(candidate: viewModel.candidate)
         }
     }
     
     // Update the UI Views
-    func updateUI(name: Name?,address:Location?,phoneNumber:String?,dob:String?,email:String?,imageUrl:String?) {
+    func updateUI() {
         
-        self.name.text = "\(name?.first ?? "") \(name?.last ?? "")"
-        self.address.text = "\(address?.street?.number ?? 0) \(address?.street?.name ?? "") \n\(address?.city ?? ""), \(address?.state ?? ""), \(address?.postcode ?? StringOrInt.string(""))"
-        
-        self.phoneNumber.text = "\(phoneNumber ?? "")"
-        
-        self.dob.text = convertDateFormater(dob)
-        
-        self.email.text = email
-        guard let candidateString = imageUrl else {return}
-        
+        if let fName = candidate?.firstName,let lName = candidate?.lastName{
+            self.name.text = "\(fName) \(lName)"
+        }
+       
+//        self.address.text = "\(candidate.locationNumber!) \(candidate.streetName!) \n\(candidate.city!), \(candidate.state!)"
+//
+        self.phoneNumber.text = candidate?.tpNo
+//
+        self.dob.text = convertDateFormater(candidate?.dob)
+//
+        self.email.text = candidate?.email
+        guard let candidateString = candidate?.imageAvatar else {return}
+
         guard let candidateImageURL = URL(string: candidateString) else {
             self.userImage.image = UIImage(named: "noImageAvailable")
             return
         }
-        
+
         getImageDataFrom(url: candidateImageURL)
         
     }

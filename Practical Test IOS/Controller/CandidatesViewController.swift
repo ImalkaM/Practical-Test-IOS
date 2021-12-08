@@ -9,13 +9,11 @@ import UIKit
 
 class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate ,UISearchBarDelegate{
    
-    
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var candidateDetailsTableView: UITableView!
     
     private var viewModel = CandidatesViewModel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +25,10 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         searchBar.delegate = self
         
         candidateDetailsTableView.delegate = self
+        
+        viewModel.getAllCandidates()
+        candidateDetailsTableView.dataSource = self
+        candidateDetailsTableView.reloadData()
        
     }
     
@@ -36,6 +38,24 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
             self?.candidateDetailsTableView.reloadData()
         }
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == ""{
+            viewModel.filteredData = viewModel.models
+            candidateDetailsTableView.reloadData()
+        }else{
+            if let searchText = searchBar.text{
+                if searchText.count >= 3{
+                    viewModel.filterSearch(searchText)
+                    candidateDetailsTableView.reloadData()
+                }
+            }
+        }
+       
+    }
+}
+
+extension CandidatesViewController{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfRowsInSection(section: section)
@@ -50,28 +70,15 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if searchText == ""{
-            viewModel.filteredData = viewModel.candidateData
-            candidateDetailsTableView.reloadData()
-        }else{
-            if let searchText = searchBar.text{
-                if searchText.count >= 3{
-                    viewModel.filterSearch(searchText)
-                    candidateDetailsTableView.reloadData()
-                }
-            }
-        }
-       
-    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             
             let candidate = viewModel.cellForRowAt(indexPath: indexPath)
             
-            vc.setCellWithValuesOf(candidate)
+            
+            vc.candidate = candidate
+            //vc.setCellWithValuesOf(candidate)
             // 2: success! Set its selectedImage property
 //            vc.selectedImage = pictures[indexPath.row]
 //            vc.imageCountDetails = ["currentNumber":indexPath.row + 1]
@@ -81,5 +88,5 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-
+    
 }

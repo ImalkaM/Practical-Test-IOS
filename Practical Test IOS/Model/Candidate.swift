@@ -35,11 +35,12 @@ struct Candidate: Decodable {
 
 struct Name: Decodable {
     
+    let title: String?
     let first: String?
     let last: String?
     
     private enum CodingKeys: String, CodingKey {
-        case first, last
+        case first, last, title
     }
 }
 
