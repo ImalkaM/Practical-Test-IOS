@@ -39,7 +39,6 @@ struct Name: Decodable {
 }
 
 struct Picture: Decodable {
-    
     let large: String?
     let medium: String?
     let thumbnail: String?

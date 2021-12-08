@@ -11,7 +11,9 @@ import Foundation
 class CandidatesViewModel {
     
     private var apiService = ApiService()
-    private var candidate = [Candidate]()
+    var candidateData = [Candidate]()
+    var filteredData = [Candidate]()
+    private var filtered = false
     
     func fetchCandidatesData(completion: @escaping () -> ()) {
         
@@ -20,7 +22,7 @@ class CandidatesViewModel {
             
             switch result {
             case .success(let listOf):
-                self?.candidate = listOf.candidate
+                self?.candidateData = listOf.candidate
                 completion()
             case .failure(let error):
                 // Something is wrong with the JSON file or the model
@@ -30,13 +32,30 @@ class CandidatesViewModel {
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        if candidate.count != 0 {
-            return candidate.count
+        
+        if !filteredData.isEmpty{
+            return filteredData.count
+        }else{
+            return candidateData.count
         }
-        return 0
     }
     
     func cellForRowAt (indexPath: IndexPath) -> Candidate {
-        return candidate[indexPath.row]
+        if !filteredData.isEmpty{
+            return filteredData[indexPath.row]
+        }else{
+           return candidateData[indexPath.row]
+        }
+    }
+    
+    func filterSearch(_ query:String){
+        filteredData.removeAll()
+        for candidate in candidateData{
+            if let firstName = candidate.name?.first, let lastName = candidate.name?.last{
+                if firstName.lowercased().starts(with: query.lowercased()) || lastName.lowercased().starts(with: query.lowercased()){
+                    filteredData.append(candidate)
+                }
+            }
+        }
     }
 }

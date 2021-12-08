@@ -33,41 +33,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-wd-AKm">
-                                <rect key="frame" x="10" y="54" width="355" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="tUS-3k-Tna"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-C7-C56">
-                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search Candidate" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-bW-MOY">
+                                <rect key="frame" x="0.0" y="56" width="375" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OM0-ic-o0K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="9fs-bz-U80"/>
-                            <constraint firstItem="OM0-ic-o0K" firstAttribute="trailing" secondItem="VY8-C7-C56" secondAttribute="trailing" id="FSg-74-U9e"/>
-                            <constraint firstItem="6Pa-wd-AKm" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" constant="10" id="HIa-Ob-qH1"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="6Pa-wd-AKm" secondAttribute="bottom" constant="10" id="OCG-Bm-l9F"/>
-                            <constraint firstItem="OM0-ic-o0K" firstAttribute="trailing" secondItem="6Pa-wd-AKm" secondAttribute="trailing" constant="10" id="goS-Hx-OmS"/>
-                            <constraint firstItem="6Pa-wd-AKm" firstAttribute="top" secondItem="OM0-ic-o0K" secondAttribute="top" constant="10" id="lfd-og-YAp"/>
-                            <constraint firstItem="OM0-ic-o0K" firstAttribute="bottom" secondItem="VY8-C7-C56" secondAttribute="bottom" id="wbs-Al-WYr"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="2LL-BR-ZBb"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="trailing" secondItem="OM0-ic-o0K" secondAttribute="trailing" id="4W0-vt-VCe"/>
+                            <constraint firstItem="cBg-bW-MOY" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="BVb-2r-c5l"/>
+                            <constraint firstItem="OM0-ic-o0K" firstAttribute="trailing" secondItem="cBg-bW-MOY" secondAttribute="trailing" id="FJP-1Q-Djn"/>
+                            <constraint firstItem="cBg-bW-MOY" firstAttribute="top" secondItem="OM0-ic-o0K" secondAttribute="top" constant="12" id="GFo-Zf-icY"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="bottom" secondItem="OM0-ic-o0K" secondAttribute="bottom" constant="5" id="HB3-y8-gxw"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="XeG-z6-lFU"/>
+                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="qK5-2g-BKX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="aeb-xk-2WN"/>
                     <navigationItem key="navigationItem" id="2aw-fQ-owi"/>
                     <connections>
                         <outlet property="candidateDetailsTableView" destination="VY8-C7-C56" id="Yuw-8L-4rC"/>
-                        <outlet property="searchBar" destination="6Pa-wd-AKm" id="s94-gr-ES5"/>
+                        <outlet property="searchBar" destination="cBg-bW-MOY" id="ucx-5x-p5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mo-rs-erB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-967" y="1452"/>
+            <point key="canvasLocation" x="-967.20000000000005" y="1451.4242878560722"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tiU-Jj-RLe">

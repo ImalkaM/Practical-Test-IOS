@@ -7,15 +7,16 @@
 
 import UIKit
 
-class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CandidatesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate ,UISearchBarDelegate{
    
     
-
-    @IBOutlet var searchBar: UITextField!
+    @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var candidateDetailsTableView: UITableView!
     
     private var viewModel = CandidatesViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCandidatesData()
@@ -24,7 +25,7 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         candidateDetailsTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
 
         candidateDetailsTableView.delegate = self
-       // candidateDetailsTableView.dataSource = self
+        searchBar.delegate = self
        
     }
     
@@ -48,4 +49,19 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == ""{
+            viewModel.filteredData = viewModel.candidateData
+            candidateDetailsTableView.reloadData()
+        }else{
+            if let searchText = searchBar.text{
+                if searchText.count >= 3{
+                    viewModel.filterSearch(searchText)
+                    candidateDetailsTableView.reloadData()
+                }
+            }
+        }
+       
+    }
 }
