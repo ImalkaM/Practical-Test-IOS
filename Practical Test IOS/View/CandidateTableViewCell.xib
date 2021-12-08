@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CandidateTableViewCell" rowHeight="130" id="KGk-i7-Jjw" customClass="CandidateTableViewCell" customModule="Practical_Test_IOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImageAvailable" translatesAutoresizingMaskIntoConstraints="NO" id="WZz-dn-IiV">
+                        <rect key="frame" x="5" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="Up0-tt-8ON"/>
+                            <constraint firstAttribute="width" constant="100" id="pgU-nc-Mat"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGE-pA-12l">
+                        <rect key="frame" x="112.5" y="10" width="45" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-Eo-cc1">
+                        <rect key="frame" x="112" y="39" width="30" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZGE-pA-12l" firstAttribute="leading" secondItem="WZz-dn-IiV" secondAttribute="trailing" constant="7.5" id="2hO-zj-xaX"/>
+                    <constraint firstItem="VvP-Eo-cc1" firstAttribute="top" secondItem="ZGE-pA-12l" secondAttribute="bottom" constant="8" symbolic="YES" id="6EN-GC-aH0"/>
+                    <constraint firstItem="WZz-dn-IiV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="S9U-wB-nBz"/>
+                    <constraint firstItem="WZz-dn-IiV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="adX-I4-1FX"/>
+                    <constraint firstAttribute="bottom" secondItem="WZz-dn-IiV" secondAttribute="bottom" constant="10" id="bvL-5C-KDC"/>
+                    <constraint firstItem="VvP-Eo-cc1" firstAttribute="leading" secondItem="WZz-dn-IiV" secondAttribute="trailing" constant="7" id="ixC-5W-01P"/>
+                    <constraint firstItem="ZGE-pA-12l" firstAttribute="top" secondItem="WZz-dn-IiV" secondAttribute="top" id="ler-fQ-Ceg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="age" destination="VvP-Eo-cc1" id="Wwj-Oh-0zY"/>
+                <outlet property="firstName" destination="ZGE-pA-12l" id="awg-gV-lKU"/>
+                <outlet property="imageCandidate" destination="WZz-dn-IiV" id="GNE-hD-9xB"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="noImageAvailable" width="184.5" height="231"/>
+    </resources>
+</document>
