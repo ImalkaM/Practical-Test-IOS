@@ -24,8 +24,9 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         candidateDetailsTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
 
-        candidateDetailsTableView.delegate = self
         searchBar.delegate = self
+        
+        candidateDetailsTableView.delegate = self
        
     }
     
@@ -64,4 +65,17 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
         }
        
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            // 2: success! Set its selectedImage property
+//            vc.selectedImage = pictures[indexPath.row]
+//            vc.imageCountDetails = ["currentNumber":indexPath.row + 1]
+//            vc.imageCountDetails = ["Count":pictures.count]
+
+            // 3: now push it onto the navigation controller
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
 }

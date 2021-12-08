@@ -9,6 +9,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var name: UILabel!
+    @IBOutlet var address: UILabel!
+    @IBOutlet var phoneNumber: UILabel!
+    @IBOutlet var dob: UILabel!
+    @IBOutlet var email: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
