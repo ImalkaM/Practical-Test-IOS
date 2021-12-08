@@ -17,16 +17,19 @@ class CandidatesViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewSetup()
         loadCandidatesData()
         setupSearchBar()
-        tableViewSetup()
-        viewModel.getAllCandidates()
+       
     }
     
     private func loadCandidatesData() {
         viewModel.fetchCandidatesData { [weak self] in
-            self?.candidateDetailsTableView.dataSource = self
-            self?.candidateDetailsTableView.reloadData()
+            self?.viewModel.getAllCandidates(completion: {
+                self?.candidateDetailsTableView.dataSource = self
+                self?.candidateDetailsTableView.reloadData()
+            })
+           
         }
     }
 
@@ -39,6 +42,7 @@ extension CandidatesViewController:UITableViewDelegate, UITableViewDataSource{
         candidateDetailsTableView.register(nib, forCellReuseIdentifier: "CandidateTableViewCell")
         candidateDetailsTableView.dataSource = self
         candidateDetailsTableView.delegate = self
+        title = "Candidates"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

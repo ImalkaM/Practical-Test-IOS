@@ -14,9 +14,6 @@ class CandidatesViewModel {
     
     private var apiService = ApiService()
     var candidateData = [Candidate]()
-    //var filteredData = [Candidate]()
-    
-    
     var models = [CandidateDetails]()
     
     var filteredData = [CandidateDetails]()
@@ -48,6 +45,9 @@ class CandidatesViewModel {
             newUser.imageAvatar = user.picture?.medium
             newUser.title = user.name?.title
             
+            
+            newUser.tpNo = user.phoneNumber
+            
             if let locationNo = user.location?.street?.number{
                 newUser.locationNumber = String(locationNo)
             }
@@ -68,7 +68,6 @@ class CandidatesViewModel {
         }
         do {
             try context.save()
-            print("Success")
             
         } catch {
             print("Error saving: \(error)")
@@ -76,9 +75,10 @@ class CandidatesViewModel {
     }
     
     
-    func getAllCandidates(){
+    func getAllCandidates(completion: @escaping () -> ()){
         do {
             models = try context.fetch(CandidateDetails.fetchRequest())
+            completion()
         } catch  {
             //
         }

@@ -57,8 +57,13 @@ class DetailViewController: UIViewController {
         if let fName = candidate?.firstName,let lName = candidate?.lastName{
             self.name.text = "\(fName) \(lName)"
         }
+        if let locationNumber = candidate?.locationNumber,
+           let streetName = candidate?.streetName,
+           let city = candidate?.city,
+           let state = candidate?.state{
+            self.address.text = "\(locationNumber) \(streetName), \n\(city), \(state)"
+        }
        
-//        self.address.text = "\(candidate.locationNumber!) \(candidate.streetName!) \n\(candidate.city!), \(candidate.state!)"
 //
         self.phoneNumber.text = candidate?.tpNo
 //

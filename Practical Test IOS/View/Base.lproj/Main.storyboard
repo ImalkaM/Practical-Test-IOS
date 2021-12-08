@@ -48,27 +48,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-C7-C56">
-                                <rect key="frame" x="0.0" y="116" width="375" height="507"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" placeholder="Search Candidate" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-bW-MOY">
-                                <rect key="frame" x="0.0" y="56" width="375" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-8h-nKt">
+                                <rect key="frame" x="0.0" y="56" width="375" height="606"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Search Candidate" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-bW-MOY">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-C7-C56">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="546"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OM0-ic-o0K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="trailing" secondItem="OM0-ic-o0K" secondAttribute="trailing" id="4W0-vt-VCe"/>
-                            <constraint firstItem="cBg-bW-MOY" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="BVb-2r-c5l"/>
-                            <constraint firstItem="OM0-ic-o0K" firstAttribute="trailing" secondItem="cBg-bW-MOY" secondAttribute="trailing" id="FJP-1Q-Djn"/>
-                            <constraint firstItem="cBg-bW-MOY" firstAttribute="top" secondItem="OM0-ic-o0K" secondAttribute="top" constant="12" id="GFo-Zf-icY"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="bottom" secondItem="OM0-ic-o0K" secondAttribute="bottom" constant="5" id="HB3-y8-gxw"/>
-                            <constraint firstItem="cBg-bW-MOY" firstAttribute="centerX" secondItem="f35-nL-Fjp" secondAttribute="centerX" id="Ivb-WL-BbL"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="XeG-z6-lFU"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="top" secondItem="cBg-bW-MOY" secondAttribute="bottom" constant="9" id="jUs-Bb-7Qi"/>
-                            <constraint firstItem="VY8-C7-C56" firstAttribute="centerX" secondItem="f35-nL-Fjp" secondAttribute="centerX" id="lBP-wP-5ga"/>
+                            <constraint firstItem="ZjA-8h-nKt" firstAttribute="trailing" secondItem="OM0-ic-o0K" secondAttribute="trailing" id="Ebp-JA-09I"/>
+                            <constraint firstItem="ZjA-8h-nKt" firstAttribute="leading" secondItem="OM0-ic-o0K" secondAttribute="leading" id="F66-na-9e9"/>
+                            <constraint firstItem="ZjA-8h-nKt" firstAttribute="top" secondItem="OM0-ic-o0K" secondAttribute="top" constant="12" id="XEP-JE-RV2"/>
+                            <constraint firstAttribute="bottom" secondItem="ZjA-8h-nKt" secondAttribute="bottom" constant="5" id="xu6-9l-zNQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="aeb-xk-2WN"/>
