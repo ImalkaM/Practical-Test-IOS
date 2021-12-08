@@ -19,12 +19,17 @@ struct Candidate: Decodable {
     let name: Name?
     let dob: dob?
     let picture:Picture?
-    
+    let location:Location?
+    let email:String?
+    let phoneNumber:String?
     
     private enum CodingKeys: String, CodingKey {
         case name
         case picture
         case dob
+        case location
+        case email
+        case phoneNumber = "phone"
     }
 }
 
@@ -55,5 +60,48 @@ struct dob: Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case date,age
+    }
+}
+
+struct Location: Decodable {
+    
+    let street: Street?
+    let city: String?
+    let state: String?
+    let postcode: StringOrInt
+    
+    private enum CodingKeys:String,CodingKey {
+        case street,city,state,postcode
+    }
+}
+
+struct Street: Decodable {
+    
+    let number: Int?
+    let name: String?
+    
+    private enum CodingKeys:String,CodingKey {
+        case number,name
+    }
+}
+
+enum StringOrInt: Decodable {
+    
+    case string(String)
+    case int(Int)
+    
+    init(from decoder: Decoder) throws {
+        if let int = try? decoder.singleValueContainer().decode(Int.self) {
+            self = .int(int)
+            return
+        }
+        if let string = try? decoder.singleValueContainer().decode(String.self) {
+            self = .string(string)
+            return
+        }
+        throw Error.couldNotFindStringOrDouble
+    }
+    enum Error: Swift.Error {
+        case couldNotFindStringOrDouble
     }
 }

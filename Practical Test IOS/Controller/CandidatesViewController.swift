@@ -68,6 +68,10 @@ class CandidatesViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            
+            let candidate = viewModel.cellForRowAt(indexPath: indexPath)
+            
+            vc.setCellWithValuesOf(candidate)
             // 2: success! Set its selectedImage property
 //            vc.selectedImage = pictures[indexPath.row]
 //            vc.imageCountDetails = ["currentNumber":indexPath.row + 1]

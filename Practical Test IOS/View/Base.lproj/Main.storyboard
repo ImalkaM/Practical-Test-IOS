@@ -106,7 +106,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t4a-Z2-vdN">
-                                                <rect key="frame" x="75" y="301" width="62.5" height="142.5"/>
+                                                <rect key="frame" x="75" y="301" width="295" height="142.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zm-Ue-ZlY">
                                                         <rect key="frame" x="0.0" y="0.0" width="33" height="20.5"/>
@@ -114,7 +114,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgf-4N-8aZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgf-4N-8aZ">
                                                         <rect key="frame" x="0.0" y="30.5" width="62.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -145,6 +145,7 @@
                                         <constraints>
                                             <constraint firstItem="t4a-Z2-vdN" firstAttribute="top" secondItem="Pav-0h-YKB" secondAttribute="bottom" constant="26" id="9ev-zV-4Bp"/>
                                             <constraint firstAttribute="height" constant="1000" id="DKP-q6-UtA"/>
+                                            <constraint firstAttribute="trailing" secondItem="t4a-Z2-vdN" secondAttribute="trailing" constant="5" id="E8j-XX-Slo"/>
                                             <constraint firstItem="Pav-0h-YKB" firstAttribute="top" secondItem="ckO-3a-49P" secondAttribute="top" constant="50" id="m7c-SU-rfC"/>
                                             <constraint firstItem="Pav-0h-YKB" firstAttribute="centerX" secondItem="ckO-3a-49P" secondAttribute="centerX" id="vtX-lE-P7i"/>
                                             <constraint firstItem="t4a-Z2-vdN" firstAttribute="leading" secondItem="Pav-0h-YKB" secondAttribute="leading" id="vuU-QP-0Qa"/>
@@ -173,11 +174,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="dhU-JK-aEb"/>
                     <connections>
-                        <outlet property="address" destination="wgf-4N-8aZ" id="pI4-X7-san"/>
-                        <outlet property="dob" destination="unI-iz-K3o" id="JaD-J5-ToM"/>
-                        <outlet property="email" destination="w2H-89-KST" id="yz4-Bd-Led"/>
-                        <outlet property="name" destination="2zm-Ue-ZlY" id="R5n-d7-yFB"/>
-                        <outlet property="phoneNumber" destination="wdw-Ir-MB7" id="EEi-KU-hP3"/>
+                        <outlet property="address" destination="wgf-4N-8aZ" id="lDh-QF-gGm"/>
+                        <outlet property="dob" destination="unI-iz-K3o" id="h3r-X7-rhg"/>
+                        <outlet property="email" destination="w2H-89-KST" id="mZe-NN-EcO"/>
+                        <outlet property="name" destination="2zm-Ue-ZlY" id="ey4-5u-df5"/>
+                        <outlet property="phoneNumber" destination="wdw-Ir-MB7" id="uxr-P9-vIS"/>
+                        <outlet property="userImage" destination="Pav-0h-YKB" id="7lC-Fk-BFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXg-FB-Dau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

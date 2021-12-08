@@ -21,6 +21,7 @@
 		AF9589A7275FB53500D3E6DB /* CandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */; };
 		AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A9275FBDD600D3E6DB /* ApiService.swift */; };
 		AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */; };
+		AF9589AF2760A51D00D3E6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateTableViewCell.xib; sourceTree = "<group>"; };
 		AF9589A9275FBDD600D3E6DB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
+		AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AF95899C275F9FBD00D3E6DB /* CandidatesViewController.swift */,
 				AF95899E275FA26C00D3E6DB /* DetailViewController.swift */,
 				AF9589A0275FA86900D3E6DB /* SelectedViewController.swift */,
+				AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				AF95899D275F9FBD00D3E6DB /* CandidatesViewController.swift in Sources */,
 				AF9589A1275FA86900D3E6DB /* SelectedViewController.swift in Sources */,
 				AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */,
+				AF9589AF2760A51D00D3E6DB /* DetailsViewController.swift in Sources */,
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
 				AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */,
 				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,

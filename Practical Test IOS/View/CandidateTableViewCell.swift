@@ -37,7 +37,6 @@ class CandidateTableViewCell: UITableViewCell {
         self.firstName.text = "\(firstName ?? "") \(lastName ?? "")"
         self.age.text = String(age ?? 0)
         guard let candidateString = image else {return}
-        //urlString = "https://image.tmdb.org/t/p/w300" + posterString
         
         guard let candidateImageURL = URL(string: candidateString) else {
             self.imageCandidate.image = UIImage(named: "noImageAvailable")
@@ -73,5 +72,4 @@ class CandidateTableViewCell: UITableViewCell {
             }
         }.resume()
     }
-    
 }
