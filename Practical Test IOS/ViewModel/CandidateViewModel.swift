@@ -16,8 +16,12 @@ class CandidatesViewModel {
     
     private var apiService = ApiService()
     var candidateData = [Candidate]()
-    var filteredData = [Candidate]()
-    private var filtered = false
+    //var filteredData = [Candidate]()
+    
+    
+    var models = [CandidateDetails]()
+    
+    var filteredData = [CandidateDetails]()
     
     func fetchCandidatesData(completion: @escaping () -> ()) {
         
@@ -39,7 +43,30 @@ class CandidatesViewModel {
     func saveUserData() {
         for user in candidateData {
             let newUser = CandidateDetails(context: context)
-            newUser.name = (user.name?.first)
+            newUser.firstName = user.name?.first
+            newUser.lastName = user.name?.last
+            newUser.email = user.email
+            newUser.dob = user.dob?.date
+            newUser.imageAvatar = user.picture?.medium
+            newUser.title = user.name?.title
+            
+            if let locationNo = user.location?.street?.number{
+                newUser.locationNumber = String(locationNo)
+            }
+            if let city = user.location?.city{
+                newUser.city = city
+            }
+            if let state = user.location?.state{
+                newUser.state = state
+            }
+            
+            if let streetName = user.location?.street?.name{
+                newUser.streetName = String(streetName)
+            }
+            if let age = user.dob?.age{
+                newUser.age = String(age)
+            }
+           
         }
         do {
             try context.save()
@@ -50,27 +77,37 @@ class CandidatesViewModel {
         }
     }
     
-    func numberOfRowsInSection(section: Int) -> Int {
-        
-        if !filteredData.isEmpty{
-            return filteredData.count
-        }else{
-            return candidateData.count
+    
+    func getAllCandidates(){
+        do {
+            models = try context.fetch(CandidateDetails.fetchRequest())
+        } catch  {
+            //
         }
     }
     
-    func cellForRowAt (indexPath: IndexPath) -> Candidate {
+    func numberOfRowsInSection(section: Int) -> Int {
+        if !filteredData.isEmpty{
+            return filteredData.count
+        }else{
+            return models.count
+        }
+    }
+    
+    func cellForRowAt (indexPath: IndexPath) -> CandidateDetails {
+
         if !filteredData.isEmpty{
             return filteredData[indexPath.row]
         }else{
-           return candidateData[indexPath.row]
+            return models[indexPath.row]
         }
+        
     }
     
     func filterSearch(_ query:String){
         filteredData.removeAll()
-        for candidate in candidateData{
-            if let firstName = candidate.name?.first, let lastName = candidate.name?.last{
+        for candidate in models{
+            if let firstName = candidate.firstName, let lastName = candidate.lastName{
                 if firstName.lowercased().starts(with: query.lowercased()) || lastName.lowercased().starts(with: query.lowercased()){
                     filteredData.append(candidate)
                 }

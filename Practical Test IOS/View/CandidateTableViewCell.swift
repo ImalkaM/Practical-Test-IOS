@@ -10,7 +10,6 @@ import UIKit
 class CandidateTableViewCell: UITableViewCell {
     
     @IBOutlet var firstName: UILabel!
-    
     @IBOutlet var imageCandidate: UIImageView!
     
     @IBOutlet var age: UILabel!
@@ -20,10 +19,8 @@ class CandidateTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    // Setup candidates values
-    func setCellWithValuesOf(_ candidate:Candidate) {
-        updateUI(firstName: candidate.name?.first, lastName: candidate.name?.last, age: candidate.dob?.age, image: candidate.picture?.medium)
+    func setCellWithValuesOf(_ candidate:CandidateDetails) {
+        updateUI(firstName: candidate.firstName, lastName: candidate.lastName, age: candidate.age, image: candidate.imageAvatar)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,9 +30,9 @@ class CandidateTableViewCell: UITableViewCell {
     }
     
     // Update the UI Views
-    private func updateUI(firstName: String?,lastName: String?,age:Int?,image:String?) {
+    private func updateUI(firstName: String?,lastName: String?,age:String?,image:String?) {
         self.firstName.text = "\(firstName ?? "") \(lastName ?? "")"
-        self.age.text = String(age ?? 0)
+        self.age.text = age
         guard let candidateString = image else {return}
         
         guard let candidateImageURL = URL(string: candidateString) else {
@@ -47,9 +44,8 @@ class CandidateTableViewCell: UITableViewCell {
         
         getImageDataFrom(url: candidateImageURL)
         
+        
     }
-    
-    
     // MARK: - Get image data
     private func getImageDataFrom(url: URL) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in

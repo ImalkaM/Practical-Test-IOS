@@ -21,9 +21,9 @@
 		AF9589A7275FB53500D3E6DB /* CandidateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */; };
 		AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589A9275FBDD600D3E6DB /* ApiService.swift */; };
 		AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */; };
-		AF9589AF2760A51D00D3E6DB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */; };
-		AF9589B22760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */; };
-		AF9589B32760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */; };
+		AF9589C22761087400D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */; };
+		AF9589C32761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */; };
+		AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589C42761146400D3E6DB /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +43,9 @@
 		AF9589A5275FB53500D3E6DB /* CandidateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandidateTableViewCell.xib; sourceTree = "<group>"; };
 		AF9589A9275FBDD600D3E6DB /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateViewModel.swift; sourceTree = "<group>"; };
-		AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandidateDetails+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF9589C42761146400D3E6DB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +88,10 @@
 				AF958983275F65B100D3E6DB /* SceneDelegate.swift */,
 				AF95898D275F65B200D3E6DB /* Assets.xcassets */,
 				AF95898F275F65B200D3E6DB /* LaunchScreen.storyboard */,
+				AF9589C02761087400D3E6DB /* CandidateDetails+CoreDataClass.swift */,
+				AF9589C12761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift */,
 				AF958992275F65B200D3E6DB /* Info.plist */,
 				AF95898A275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld */,
-				AF9589B02760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift */,
-				AF9589B12760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift */,
 			);
 			path = "Practical Test IOS";
 			sourceTree = "<group>";
@@ -110,7 +110,6 @@
 				AF95899C275F9FBD00D3E6DB /* CandidatesViewController.swift */,
 				AF95899E275FA26C00D3E6DB /* DetailViewController.swift */,
 				AF9589A0275FA86900D3E6DB /* SelectedViewController.swift */,
-				AF9589AE2760A51D00D3E6DB /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AF9589AB275FBEA700D3E6DB /* CandidateViewModel.swift */,
+				AF9589C42761146400D3E6DB /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -221,16 +221,16 @@
 			files = (
 				AF95899D275F9FBD00D3E6DB /* CandidatesViewController.swift in Sources */,
 				AF9589A1275FA86900D3E6DB /* SelectedViewController.swift in Sources */,
+				AF9589C32761087400D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */,
 				AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */,
-				AF9589AF2760A51D00D3E6DB /* DetailsViewController.swift in Sources */,
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
+				AF9589C22761087400D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */,
 				AF9589A3275FAB6E00D3E6DB /* Candidate.swift in Sources */,
 				AF9589AA275FBDD600D3E6DB /* ApiService.swift in Sources */,
-				AF9589B32760DEAF00D3E6DB /* CandidateDetails+CoreDataProperties.swift in Sources */,
 				AF958984275F65B100D3E6DB /* SceneDelegate.swift in Sources */,
+				AF9589C52761146400D3E6DB /* DetailViewModel.swift in Sources */,
 				AF95898C275F65B100D3E6DB /* Practical_Test_IOS.xcdatamodeld in Sources */,
 				AF9589AC275FBEA700D3E6DB /* CandidateViewModel.swift in Sources */,
-				AF9589B22760DEAF00D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */,
 				AF9589A6275FB53500D3E6DB /* CandidateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
