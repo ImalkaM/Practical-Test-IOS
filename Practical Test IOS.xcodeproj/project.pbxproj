@@ -31,6 +31,7 @@
 		AF9589D327612EB800D3E6DB /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D227612EB800D3E6DB /* Name.swift */; };
 		AF9589D527612F0500D3E6DB /* BirthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D427612F0500D3E6DB /* BirthYear.swift */; };
 		AF9589D82761301700D3E6DB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589D72761301700D3E6DB /* Constant.swift */; };
+		AF9589DB2761F1FC00D3E6DB /* CustomDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9589DA2761F1FC00D3E6DB /* CustomDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		AF9589D227612EB800D3E6DB /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
 		AF9589D427612F0500D3E6DB /* BirthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthYear.swift; sourceTree = "<group>"; };
 		AF9589D72761301700D3E6DB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AF9589DA2761F1FC00D3E6DB /* CustomDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		AF958980275F65B100D3E6DB /* Practical Test IOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF9589D92761F1DF00D3E6DB /* Helper */,
 				AF9589C827612CB300D3E6DB /* LocalDB */,
 				AF9589AD2760905900D3E6DB /* Utilities */,
 				AF9589A8275FBDAC00D3E6DB /* Networking */,
@@ -185,6 +188,14 @@
 			path = CoreDataModel;
 			sourceTree = "<group>";
 		};
+		AF9589D92761F1DF00D3E6DB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF9589DA2761F1FC00D3E6DB /* CustomDecodable.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,6 +277,7 @@
 				AF9589D82761301700D3E6DB /* Constant.swift in Sources */,
 				AF958982275F65B100D3E6DB /* AppDelegate.swift in Sources */,
 				AF95899F275FA26C00D3E6DB /* DetailViewController.swift in Sources */,
+				AF9589DB2761F1FC00D3E6DB /* CustomDecodable.swift in Sources */,
 				AF9589D527612F0500D3E6DB /* BirthYear.swift in Sources */,
 				AF9589C22761087400D3E6DB /* CandidateDetails+CoreDataClass.swift in Sources */,
 				AF9589CD27612E2A00D3E6DB /* Location.swift in Sources */,
